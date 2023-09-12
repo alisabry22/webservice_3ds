@@ -1,0 +1,73 @@
+
+// var xFormBody;
+
+// https.request(options, resp => {
+
+//     resp.on("data", d => {
+//          xFormBody = `${encodeURI('lt')}=${JSON.parse(d.toString()).lt}&${encodeURI('username')}=${encodeURI('ksaad')}&${encodeURI('password')}=${'Enovia123'}`;
+      
+//         const options2 = {
+//             hostname: hostname,
+//             port: 443,
+//             path: "/3dpassport/login?service=",
+//             method: 'POST',
+            
+//             headers: {
+//                 'Accept': "application/json",
+//                 'Content-Type': "application/x-www-form-urlencoded;charset=UTF-8",
+//                 'Content_Length': Buffer.byteLength(xFormBody),
+//                'Cookie':resp.headers["set-cookie"]
+//             },
+         
+//             "rejectUnauthorized": false,
+//         };
+        
+       
+       
+    
+       
+//        const req= https.request(options2, (resp1) => {
+                
+//             resp1.on("data", (res) => {console.log(res)});
+//             resp1.on("end",()=>{
+             
+//                 const options3 = {
+//                     hostname: hostname,
+//                     port: 443,
+//                     path: "/3dspace/resources/modeler/pno/person?current=true&select=preferredcredentials&select=collabspaces",
+//                     method: 'GET',
+                    
+//                     headers: {
+//                         'Accept': "application/json",
+            
+//                        'Cookie':resp1.headers["set-cookie"]
+//                     },
+                 
+//                     "rejectUnauthorized": false,
+//                 };
+            
+//                 https.request(options3,(response3)=>{
+                  
+//                     response3.on('data',(data)=>{
+//                         console.log(data); 
+                     
+//                     });
+//                     response3.on('end',()=>{
+//                       console.log(response3.headers);
+//                     });
+//                 }).on("error",err=>console.log(err)).end();
+//             });
+
+    
+            
+//         }).on("error", err => {
+//             console.log(err);
+//         });
+//         req.write(xFormBody);
+//         req.end();
+
+//     })
+
+// }).on("error", err => {
+//     console.log(err);
+// }).end()
