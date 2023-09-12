@@ -67,13 +67,14 @@ function LoginWithUsernameAndPassword(cookies,lt,username,password){
    
     return new Promise(async function(resolve,reject){
         try {
+            //this to handle castGC cookie before redirect because this request has redirection and i need to get CastGC before redirection
+            //the most important step is below (beforeRedirect to catch CASTGC before redirection)
             cas_auth_options.beforeRedirect = (options, response, request) => {
                 var beforeRedirectCookies=[];
                 beforeRedirectCookies=response.headers["set-cookie"];
                 for(let i=0 ; i<beforeRedirectCookies.length;i++){
                     cookie.push(beforeRedirectCookies[i]);
                 }
-//this to handle castGC cookie before redirect because this request has redirection and i need to get CastGC before redirection
 
                 cas_auth_options.headers.Cookie = cookie;   
                 
